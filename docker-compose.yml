@@ -3,7 +3,7 @@ volumes:
 
 services:
   wg-easy:
-    environment:
+    # environment:
     #  Optional:
       # - PORT=443
       # - HOST=0.0.0.0
