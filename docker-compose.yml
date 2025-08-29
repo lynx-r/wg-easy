@@ -3,10 +3,10 @@ volumes:
 
 services:
   wg-easy:
-    #environment:
+    environment:
     #  Optional:
-    #  - PORT=51821
-    #  - HOST=0.0.0.0
+     - PORT=443
+     - HOST=0.0.0.0
     #  - INSECURE=false
 
     image: ghcr.io/wg-easy/wg-easy:15
@@ -20,7 +20,7 @@ services:
       - /lib/modules:/lib/modules:ro
     ports:
       - "51820:51820/udp"
-      - "443:51821/tcp"
+      - "51821:51821/tcp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
