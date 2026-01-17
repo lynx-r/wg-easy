@@ -22,9 +22,9 @@ services:
       - "51820:51820/udp"
       - "51821:51821/tcp"
     restart: unless-stopped
-    # cap_add:
-    #   - NET_ADMIN
-    #   - SYS_MODULE
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
       # - NET_RAW # ⚠️ Uncomment if using Podman
     sysctls:
       - net.ipv4.ip_forward=1
